@@ -1,7 +1,7 @@
-version: "2"
+version: "3"
 
 services:
-  db:
+  postgress:
     image: postgres:16
     ports:
       - "5432:5432" 
@@ -10,7 +10,7 @@ services:
       - POSTGRES_USER=odoo17
       - POSTGRES_PASSWORD=odoo
     volumes:
-      - odoo17-db-data:/var/lib/postgresql/data
+      - ./odoo17-db-data:/var/lib/postgresql/data
 
   odoo_web:
     build:
