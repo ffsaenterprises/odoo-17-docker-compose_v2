@@ -19,7 +19,7 @@ services:
     ports:
       - "8069:8069"
     environment:
-      - DB_HOST=db
+      - DB_HOST=postgress
       - DB_PORT=5432
       - DB_USER=odoo17
       - DB_PASSWORD=odoo
@@ -30,4 +30,4 @@ services:
 
 volumes:
   odoo17-web-data:
-  odoo17-db-data:
+  odoo17-postgress-data:
